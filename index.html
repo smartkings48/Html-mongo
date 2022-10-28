@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customers</title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+    <section style="border: 1px rgb(50, 148, 20) solid; height: 450px; width: 500px; border-radius: 15px;
+    border-top-width: 20px;">
+    
+        <form action ="/" method="post" class="container"><br>
+        <p> 
+            <label for="name"></label>
+        <input type="text" name="name" id="name" required placeholder="Name" class="form-control" style="width: 400px; ;"> 
+        </p>
+            <p>
+                <label for="email"></label>
+                <input type="text" name="email" required id="email" placeholder="Email" class="form-control" style="width: 400px;;">
+            </p>
+
+            <p>
+                <label for="phone"></label>
+                <input type="number" name="phone" id="phone" required placeholder="Phone" class="form-control" style="width: 400px;">
+            </p>
+
+          <p>
+            <label for="address"></label>
+            <input type="text" name="address" id="address" required placeholder="Adress" class="form-control" style="width: 400px ;">
+          </p>
+
+            <p>
+                <label for="submit"></label>
+                <button  class="btn btn-success">Send</button>
+            </p>
+
+        </form>
+    </section><b>
+<p>
+
+<form action="/" method="post">
+<textarea name="mailbody" id="mailbody" cols="30" rows="10" placeholder="type your mail" required></textarea>
+ 
+<p>
+
+    <button  class="btn btn-danger" value>Send</button>
+</p>
+</form>
+
+</p>
+<script> 
+  const dat = (datas) => {
+    console.log(datas);
+   const mails = datas.data.map(emails => emails.email)
+   console.log(mails);
+
+  }   
+    fetch('http://localhost:2000/cust') .then((response) => response.json()).then(data => dat(data))
+    ;
+</script>
+
+
+
+</html>
