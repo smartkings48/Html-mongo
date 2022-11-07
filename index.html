@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <section style="border: 1px rgb(50, 148, 20) solid; height: 450px; width: 500px; border-radius: 15px;
+    <section style="border: 1px rgb(50, 148, 20) solid; height: 300px; width: 500px; border-radius: 15px;
     border-top-width: 20px;">
     
         <form action ="/" method="post" class="container"><br>
@@ -41,13 +41,15 @@
         </form>
     </section><b>
 <p>
-
-<form action="/" method="post">
-<textarea name="mailbody" id="mailbody" cols="30" rows="10" placeholder="type your mail" required></textarea>
+<section style="border: 1px rgb(50, 148, 20) solid; height: 200px; width: 259px; border-radius: 15px;
+border-top-width: 20px">
+<form action="/sendtoemails" method="post">
+<textarea name="mailbody" id="mailbody" cols="30" value="mailbody" rows="10" placeholder="type your mail" required></textarea>
  
 <p>
-
-    <button  class="btn btn-danger" value>Send</button>
+</section>
+    <label for="submit"></label>
+    <button  class="btn btn-danger" value="mailbody">Send</button>
 </p>
 </form>
 
